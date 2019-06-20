@@ -24,11 +24,20 @@ router.get('/:id', async (req: Request, res: Response) => {
 });
 
 // update a specific resource
-router.patch('/:id', 
-    requireAuth, 
-    async (req: Request, res: Response) => {
-        //@TODO try it yourself
-        res.send(500).send("not implemented")
+router.patch('/:id', requireAuth, async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const caption = req.body.caption;
+  const url = req.body.url;
+
+  // check to make sure the id is set
+  if (!id) {
+    // respond with an error if not
+    return res.status(400).send(`id is required`);
+  }
+
+  let item = await FeedItem.findByPk(id);
+  item.update({ caption: caption, url: url });
+  res.send(item);
 });
 
 // Get a signed url to put a new item in the bucket
