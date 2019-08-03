@@ -7,10 +7,10 @@
 Udagram is a simple cloud application  It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
 
 The project is split into three parts:
-1. [The Simple Frontend]
+1. [The Simple Frontend] https://github.com/grutt/udacity-c2-frontend
 A basic Ionic client web application which consumes the RestAPI Backend. 
 2. [The RestAPI Backend]  - This Repo
-3. [The Image Filtering Microservice]
+3. [The Image Filtering Microservice] https://github.com/shikharsharma23/ImageFilteringMicroServiceCloudEBS
 which runs a simple Python script to process images.
 
 
