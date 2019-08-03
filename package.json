@@ -1,5 +1,5 @@
 {
-  "name": "udacity-c2-restapi",
+  "name": "mytryapp2",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
@@ -38,7 +38,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "mocha": "^6.1.4",
-    "ts-node-dev": "^1.0.0-pre.32",
+    "ts-node-dev": "^1.0.0-pre.40",
     "tslint": "^5.14.0",
     "typescript": "^3.3.4000"
   }
