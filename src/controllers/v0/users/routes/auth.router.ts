@@ -29,20 +29,25 @@ function generateJWT(user: User): string {
 }
 
 export function requireAuth(req: Request, res: Response, next: NextFunction) {
+  console.log('here3');
   if (!req.headers || !req.headers.authorization) {
     return res.status(401).send({ message: 'No authorization headers.' });
   }
 
+
   // split up the authorization -- format is Bearer tokentextstring1234
+  console.log()
+  console.log(req.headers.authorization)
   const token_bearer = req.headers.authorization.split(' ');
   if (token_bearer.length != 2) {
     return res.status(401).send({ message: 'Malformed token.' });
   }
 
   const token = token_bearer[1];
-
+  console.log('here4');
   return jwt.verify(token, config.jwt.secret, (err, decoded) => {
     if (err) {
+      console.log(err);
       return res
         .status(500)
         .send({ auth: false, message: 'Failed to authenticate.' });

@@ -6,8 +6,8 @@ export const config = {
     "host": "shikharsdb.cozytgaly54s.us-west-2.rds.amazonaws.com",
     "dialect": "postgres",
     "aws_reigion": "us-west-2",
-    "aws_profile": "DEPLOYED",
-    "aws_media_bucket": "udagram-shikhar-dev"
+    "aws_profile": "default",
+    "aws_media_bucket": "mbck"
   },
   prod: {
     "username": "",
@@ -17,6 +17,6 @@ export const config = {
     "dialect": "postgres"
   },
   jwt: {
-    secret: process.env.JWT_SECRET
+    secret: "helloworld"
   }
 }
